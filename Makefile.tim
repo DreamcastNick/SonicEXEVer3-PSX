@@ -1,0 +1,134 @@
+all: \
+	iso/menu/menu.arc \
+	iso/menu/loading.tim \
+	iso/font/boldfont.tim \
+	iso/font/arial.tim \
+	iso/stage/hud0.tim \
+	iso/stage/hud1.tim \
+	iso/stage/hud0weeb.tim \
+	iso/stage/hud1weeb.tim \
+	iso/bf/main.arc \
+	iso/bf/dead.arc \
+	iso/bf/alt.arc \
+	iso/bf/weeb.arc \
+	iso/bflip/main.arc \
+	iso/bflip/dead.arc \
+	iso/bflip/alt.arc \
+	iso/dad/main.arc \
+	iso/knux/main.arc \
+	iso/tails/main.arc \
+	iso/eggman/main.arc \
+	iso/xeno/main.arc \
+	iso/xenof/main.arc \
+	iso/spook/main.arc \
+	iso/pico/main.arc \
+	iso/mom/main.arc \
+	iso/mom/hair.tim \
+	iso/bf/xmas.arc \
+	iso/xmasp/main.arc \
+	iso/senpai/main.arc \
+	iso/senpaim/main.arc \
+	iso/spirit/main.arc \
+	iso/gf/main.arc \
+	iso/gf/tut.arc \
+	iso/gf/weeb.arc \
+	iso/gf/speaker.tim \
+	iso/week1/back.arc \
+	iso/week2/back.arc \
+	iso/week3/back.arc \
+	iso/week4/back.arc \
+	iso/week4/hench.arc \
+	iso/week5/back.arc \
+	iso/week6/back.arc \
+	iso/week6/back3.tim \
+	iso/week8/back.arc \
+
+iso/%.tim: iso/%.png
+	tools/funkintimconv/funkintimconv $@ $<
+
+iso/%.arc:
+	tools/funkinarcpak/funkinarcpak $@ $^
+
+# Menu
+iso/menu/menu.arc: iso/menu/back.tim iso/menu/ng.tim iso/menu/story.tim iso/menu/title.tim
+
+# BF
+iso/bf/main.arc: iso/bf/bf0.tim iso/bf/bf1.tim iso/bf/bf2.tim iso/bf/bf3.tim iso/bf/bf4.tim iso/bf/bf5.tim iso/bf/bf6.tim iso/bf/dead0.tim
+iso/bf/dead.arc: iso/bf/dead1.tim iso/bf/dead2.tim iso/bf/retry.tim
+iso/bf/alt.arc: iso/bf/bfalt0.tim iso/bf/bfalt1.tim iso/bf/bfalt2.tim iso/bf/bfalt3.tim iso/bf/bfalt4.tim
+iso/bf/weeb.arc: iso/bf/weeb0.tim iso/bf/weeb1.tim
+
+# BFlip
+iso/bflip/main.arc: iso/bflip/bf0.tim iso/bflip/bf1.tim iso/bflip/bf2.tim iso/bflip/bf3.tim iso/bflip/bf4.tim iso/bflip/bf5.tim iso/bflip/bf6.tim iso/bflip/dead0.tim
+iso/bflip/dead.arc: iso/bflip/dead1.tim iso/bflip/dead2.tim iso/bflip/retry.tim
+iso/bflip/alt.arc: iso/bflip/bfalt0.tim iso/bflip/bfalt1.tim iso/bflip/bfalt2.tim iso/bflip/bfalt3.tim iso/bflip/bfalt4.tim
+
+# Dad
+iso/dad/main.arc: iso/dad/idle0.tim iso/dad/idle1.tim iso/dad/left.tim iso/dad/down.tim iso/dad/up.tim iso/dad/right.tim
+
+# Knux
+iso/knux/main.arc: iso/knux/idle0.tim iso/knux/idle1.tim iso/knux/left.tim iso/knux/down.tim iso/knux/up.tim iso/knux/right.tim
+
+# Tails
+iso/tails/main.arc: iso/tails/idle0.tim iso/tails/idle1.tim iso/tails/left.tim iso/tails/down.tim iso/tails/up.tim iso/tails/right.tim
+
+# Eggman
+iso/eggman/main.arc: iso/eggman/idle0.tim iso/eggman/idle1.tim iso/eggman/idle2.tim iso/eggman/idle3.tim iso/eggman/idle4.tim iso/eggman/idle5.tim iso/eggman/left0.tim iso/eggman/left1.tim iso/eggman/left2.tim iso/eggman/left3.tim iso/eggman/down0.tim iso/eggman/down1.tim iso/eggman/down2.tim iso/eggman/down3.tim iso/eggman/up0.tim iso/eggman/up1.tim iso/eggman/up2.tim iso/eggman/up3.tim iso/eggman/right0.tim  iso/eggman/right1.tim iso/eggman/right2.tim  iso/eggman/right3.tim iso/eggman/right0.tim iso/eggman/right1.tim iso/eggman/right2.tim iso/eggman/right3.tim iso/eggman/laugh0.tim iso/eggman/laugh1.tim iso/eggman/laugh2.tim  iso/eggman/laugh3.tim iso/eggman/laugh4.tim iso/eggman/laugh5.tim iso/eggman/laugh6.tim
+
+# Xenophanes
+iso/xeno/main.arc: iso/xeno/idle0.tim iso/xeno/idle1.tim iso/xeno/idle2.tim iso/xeno/idle3.tim iso/xeno/idle4.tim iso/xeno/idle5.tim iso/xeno/left0.tim iso/xeno/left1.tim iso/xeno/down0.tim iso/xeno/down1.tim iso/xeno/up0.tim iso/xeno/up1.tim iso/xeno/right0.tim iso/xeno/right1.tim iso/xeno/laugh0.tim iso/xeno/laugh1.tim
+
+# Xenophanes Flipped
+iso/xenof/main.arc: iso/xenof/idle0.tim iso/xenof/idle1.tim iso/xenof/idle2.tim iso/xenof/idle3.tim iso/xenof/idle4.tim iso/xenof/idle5.tim iso/xenof/left0.tim iso/xenof/left1.tim iso/xenof/down0.tim iso/xenof/down1.tim iso/xenof/up0.tim iso/xenof/up1.tim iso/xenof/right0.tim iso/xenof/right1.tim iso/xenof/laugh0.tim iso/xenof/laugh1.tim
+
+# Spook
+iso/spook/main.arc: iso/spook/idle0.tim iso/spook/idle1.tim iso/spook/idle2.tim iso/spook/left.tim iso/spook/down.tim iso/spook/up.tim iso/spook/right.tim
+
+# Pico
+iso/pico/main.arc: iso/pico/idle.tim iso/pico/hit0.tim iso/pico/hit1.tim
+
+# Mom
+iso/mom/main.arc: iso/mom/idle0.tim iso/mom/idle1.tim iso/mom/left.tim iso/mom/down.tim iso/mom/up.tim iso/mom/right.tim
+
+# Xmas BF
+iso/bf/xmas.arc: iso/bf/xmasbf0.tim iso/bf/xmasbf1.tim iso/bf/xmasbf2.tim iso/bf/xmasbf3.tim iso/bf/dead0.tim
+
+# Xmas Parents
+iso/xmasp/main.arc: iso/xmasp/idle0.tim iso/xmasp/idle1.tim iso/xmasp/idle2.tim iso/xmasp/idle3.tim iso/xmasp/lefta0.tim iso/xmasp/lefta1.tim iso/xmasp/leftb0.tim iso/xmasp/leftb1.tim iso/xmasp/downa0.tim iso/xmasp/downa1.tim iso/xmasp/downb0.tim iso/xmasp/downb1.tim iso/xmasp/upa0.tim iso/xmasp/upa1.tim iso/xmasp/upb0.tim iso/xmasp/upb1.tim iso/xmasp/righta0.tim iso/xmasp/righta1.tim iso/xmasp/rightb0.tim iso/xmasp/rightb1.tim
+
+# Senpai
+iso/senpai/main.arc: iso/senpai/senpai0.tim iso/senpai/senpai1.tim
+iso/senpaim/main.arc: iso/senpaim/senpai0.tim iso/senpaim/senpai1.tim
+
+# Spirit
+iso/spirit/main.arc: iso/spirit/spirit0.tim iso/spirit/spirit1.tim
+
+# GF
+iso/gf/main.arc: iso/gf/gf0.tim iso/gf/gf1.tim iso/gf/gf2.tim
+iso/gf/tut.arc: iso/gf/tut0.tim iso/gf/tut1.tim
+iso/gf/weeb.arc: iso/gf/weeb0.tim iso/gf/weeb1.tim
+
+# Week 1
+iso/week1/back.arc: iso/week1/back0.tim iso/week1/back1.tim
+
+# Week 2
+iso/week2/back.arc: iso/week2/back0.tim iso/week2/back1.tim iso/week2/back2.tim
+
+# Week 3
+iso/week3/back.arc: iso/week3/back0.tim iso/week3/back1.tim iso/week3/back2.tim iso/week3/back3.tim iso/week3/back4.tim iso/week3/back5.tim
+
+# Week 4
+iso/week4/back.arc: iso/week4/back0.tim iso/week4/back1.tim iso/week4/back2.tim iso/week4/back3.tim
+iso/week4/hench.arc: iso/week4/hench0.tim iso/week4/hench1.tim
+
+# Week 5
+iso/week5/back.arc: iso/week5/back0.tim iso/week5/back1.tim iso/week5/back2.tim iso/week5/back3.tim iso/week5/back4.tim iso/week5/back5.tim
+
+# Week 6
+iso/week6/back.arc: iso/week6/back0.tim iso/week6/back1.tim iso/week6/back2.tim
+
+# Week 7
+iso/week7/back.arc: iso/week7/back0.tim iso/week7/back1.tim iso/week7/back2.tim iso/week7/back3.tim
+
+# Week 8
+iso/week8/back.arc: iso/week8/back0.tim iso/week8/back1.tim iso/week8/back2.tim
